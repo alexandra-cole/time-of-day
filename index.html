@@ -41,6 +41,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -49,42 +50,39 @@
         <h2 id="time-text">What time is it?</h2>
 
         <p>This page will change based on the hour of the day.</p>
-        <p>Add your explanation of what the page does, and how it works here.</p>
+        <p>This is a page that will have a certain background color and and image depending on the time of day.</p>
 
         <img id="time-pic" src="https://dummyimage.com/300x400" alt="Time of Day Image">
     </div>
 
     <script>
-        // We will use this section to write our if/else logic
-        // Example: document.querySelector('#time-text').innerHTML = "Good Morning!";
-        
-        /* Below, we would target the 'html' element to change 
-           the background color using document.querySelector('html') 
-        */
+     
+        let myDate = new Date();
+        let myHour = myDate.getHours();
+        let mySentence = "";
+        let myColor = "";
+        let myPic = "";
 
-
-
-        myDate = new Date();
-        myHour = myDate.getHours();
-        mySentence = "";
-        myColor = "";
-
-        if(myHour >= 12){
-        //alert("It's after noon!");
-        mySentence = "It's after noon!";
-        myColor = "blue";
+        if(myHour >= 12 ){
+            //alert("It's after noon!");
+            mySentence = "It's after noon!";
+            myColor = "blue";
+            myPic = "afternoon.jpg";
         }else{
-        //alert("It's not after noon!");
-        mySentence = "It's not after noon!";
-        myColor = "purple";
-
+            //alert("It's not after noon!");
+            mySentence = "It's night";
+            myColor = "purple";
+            myPic = "night.jpg";
         }
 
+        //adds sentence to page
         document.getElementById("time-text").innerHTML = mySentence;
-        //document.body.style.backgroundColor = myColor;
+   
+        //adds color to html
         document.querySelector('html').style.backgroundColor = myColor
 
-
+        //change to our pic
+        document.getElementById("time-pic").stc = myPic;
 
 
 
