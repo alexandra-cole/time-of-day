@@ -58,7 +58,7 @@
     <script>
      
         /*
-            Use JavaScript to determine the current hour, and present a different image, custom message, and color based on each of the following times of day:
+            JavaScript to determine the current hour, and present a different image, custom message, and color based on each of the following times of day:
 
             Morning (5am to 12 noon)
             Afternoon (12 noon to 6pm)
@@ -72,14 +72,11 @@
         let myColor = "";
         let myPic = "";
 
-        //TESTING ONLY REMOVE FOLLOWING LINE:
-        myHour = 2;
 
         if(myHour >= 5 && myHour < 12){
             mySentence = "Good morning!";
             myColor = "orange";
             myPic = "morning.jpg";
-
          }
 
          else if(myHour >= 12 && myHour < 18){
