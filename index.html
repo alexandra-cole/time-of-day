@@ -50,8 +50,23 @@
         <h2 id="time-text">What time is it?</h2>
 
         <p>This page will change based on the hour of the day.</p>
-        <p>This is a page that will have a certain background color and and image depending on the time of day.</p>
 
+        <p>This is a dynamic page that has a certain background color and and image depending on the time of day.</p>
+
+        <p>This page uses JavaScript to determine the current hour, and present a different image, custom message, and color based on each of the following times of day:</p>
+
+        <div style="width:50%;">
+            <ul>
+                <li>Morning (5am to 12 noon)</li>
+                <li>Afternoon (12 noon to 6pm)</li>
+                <li>Evening (6pm to 11pm)</li>
+                <li>Night (11pm to 5am)</li>
+            </ul>
+        </div>
+
+        <p>To do this, I'm using a compound if block and selecting ranges and using the getHours method of the Date() object.</p>
+        <p>To make changes, I use <strong>document.getElementByID()</strong> and <strong>document.querySelector()</strong> to identify items on the page to change.</p>
+         
         <img id="time-pic" src="https://dummyimage.com/300x400" alt="Time of Day Image">
     </div>
 
@@ -107,7 +122,7 @@
         myPic = "images/" + myPic;
 
         console.log(myPic);
-        alert(myPic);
+  
 
         //change to our pic
         document.getElementById("time-pic").src = myPic;
